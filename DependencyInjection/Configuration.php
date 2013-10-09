@@ -332,13 +332,17 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('analyzer')->end()
             ->scalarNode('term_vector')->end()
             ->scalarNode('null_value')->end()
-            ->booleanNode('include_in_all')->defaultValue(true)->end()
+            ->booleanNode('include_in_all')->end()
             ->scalarNode('lat_lon')->end()
             ->scalarNode('index_name')->end()
             ->booleanNode('omit_norms')->end()
             ->scalarNode('index_options')->end()
             ->scalarNode('ignore_above')->end()
             ->scalarNode('position_offset_gap')->end()
+            ->booleanNode('payloads')->end()
+            ->booleanNode('preserve_separators')->end()
+            ->booleanNode('preserve_position_increments')->end()
+            ->scalarNode('max_input_len')->end()
         ;
 
         if (isset($nestings['fields'])) {
